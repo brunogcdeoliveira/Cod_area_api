@@ -1,5 +1,5 @@
 # TODO
-# chevar uf maiúsculo/minúsculo
+# checar uf maiúsculo/minúsculo
 # consumir esta api via script em python
 # tratativa de erro para uf ou ddd que não exista (curso de tratativa de excessão e conhecer fastAPI)
 # usar modelo do pydantic como response para melhorar a documentação
@@ -13,7 +13,7 @@ app = FastAPI()
 def busca_ddd_uf(uf: str):
     lista_resultados = []
     for ddd in DDD_REGIAO.keys():
-        if uf == DDD_REGIAO[ddd]["uf"]:
+        if uf.upper() == DDD_REGIAO[ddd]["uf"]:
             # print(uf , DDD_REGIAO[ddd]["regiao"], ddd)
             lista_resultados.append({"regiao": DDD_REGIAO[ddd]["regiao"], "ddd": ddd})
     return lista_resultados
