@@ -1,10 +1,5 @@
-# TODO
-# checar uf maiúsculo/minúsculo
-# consumir esta api via script em python
-# tratativa de erro para uf ou ddd que não exista (curso de tratativa de excessão e conhecer fastAPI)
-# usar modelo do pydantic como response para melhorar a documentação
-
 from fastapi import FastAPI
+
 from ddd import DDD_REGIAO
 
 app = FastAPI()
